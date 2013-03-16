@@ -4,8 +4,6 @@ import android.app.*;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
-import java.util.*;
-import android.view.inputmethod.*;
 import android.content.*;
 
 public class MainActivity extends Activity
@@ -49,14 +47,14 @@ public class MainActivity extends Activity
 				{
 					float calcGainFrom = total + 250f;
 					float calcGainTo = total + 300f;
-                    
-					gain.setText("From " + String.valueOf(calcGainFrom).format("%.02f", calcGainFrom) + " to " + 
-								 String.valueOf(calcGainTo).format("%.02f", calcGainTo) + " calories per day."); 
+
+					gain.setText("From " + String.format("%.0f", calcGainFrom) + " to " + 
+								 String.format("%.0f", calcGainTo) + " calories per day."); 
 				
 					float calcLoss = total - 500f;
-					loss.setText("About " + String.valueOf(calcLoss).format("%.02f", calcLoss) + " calories per day."); 
+					loss.setText("About " + String.format("%.0f", calcLoss) + " calories per day."); 
 					
-					maintain.setText("Around " + String.valueOf(total).format("%.02f", total) + " calories per day.");
+					maintain.setText("Around " + String.format("%.0f", total) + " calories per day.");
 				}
 
 				private boolean validateInputs()

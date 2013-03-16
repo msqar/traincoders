@@ -98,7 +98,6 @@
 		android:id="@+id/tGender"
 		android:layout_height="wrap_content"
 		android:layout_width="fill_parent"
-		android:spinnerMode="dropdown"
 		android:prompt="@string/select"
 		android:entries="@array/gender_list"
 	/>	
