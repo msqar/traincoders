@@ -28,7 +28,7 @@
 	<string name="cat_usage">Usage</string>
 	<string name="sum_measure">Select a measure type</string>
 	<string name="title_measure">Measure Type</string>
-	<string name="sum_about">About TrainCoders</string>
+	<string name="sum_about">About the app</string>
 	<string name="title_about">About</string>
 	<string name="about_message">This is a tool used to measure the daily calories you would need to consume whether to loss, gain 
 	    		or maintain your weight depending on your weight, height, age and gender. \n</string>
