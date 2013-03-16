@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+          
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+	android:isScrollContainer="true"
+	>
+<!--
+    <ImageView
+    android:id="@+id/splashscreen"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:contentDescription="@string/splash_desc"
+    android:background="#000"
+    android:src="@drawable/splash" /> -->
+    
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:text="@string/app_description" />
+		
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="0.5dip"
+		android:layout_marginTop="5dp"
+		android:background="#3e3e3e"
+	/>
+	
+	
+    <TextView
+		android:id="@+id/weight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/weight" />
+		
+	<EditText
+		android:id="@+id/tWeight"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		
+		android:visibility="visible"
+		android:inputType="numberDecimal"
+		android:maxLines="1"
+		android:maxLength="4"
+		android:nextFocusDown="@+id/height"
+		/>
+		
+	<TextView
+		android:id="@+id/height"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/height" />
+		
+	<EditText
+		android:id="@+id/tHeight"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+
+		android:visibility="visible"
+		android:inputType="numberDecimal"
+		android:maxLines="1"
+		android:maxLength="4"
+		android:nextFocusDown="@+id/age"
+	/>
+		
+	<TextView
+		android:id="@+id/age"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/age" />
+		
+	<EditText
+		android:id="@+id/tAge"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+
+		android:visibility="visible"
+		android:inputType="numberDecimal"
+		android:maxLines="1"
+		android:maxLength="2"
+		android:nextFocusDown="@+id/gender"
+	/>
+	
+	<TextView
+		android:id="@+id/gender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gender" />
+		
+	<Spinner
+		android:id="@+id/tGender"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:spinnerMode="dropdown"
+		android:prompt="@string/select"
+		android:entries="@array/gender_list"
+	/>	
+	
+	<Button
+		android:id="@+id/btnCalculate"
+		android:text="@string/btnCalculate"
+		android:layout_height="wrap_content"
+		android:layout_width="186.67dp"
+		android:layout_gravity="center_vertical|center_horizontal"
+		android:onClick="onButtonClick"
+	/>
+	
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/results"
+		android:color="#fff"
+	/>
+	
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="0.5dip"
+		android:layout_marginTop="5dp"
+		android:background="#3e3e3e"
+	/>
+	
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loss_title" 
+		android:textColor="#fff"
+	/>
+		
+	<TextView
+		android:id="@+id/loss_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:textSize="15sp"
+		android:textIsSelectable="true"
+    />
+		
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gain_title" 
+		android:textColor="#fff"
+	/>
+
+	<TextView
+		android:id="@+id/gain_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:textSize="15sp"
+		android:textIsSelectable="true"
+    />
+		
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/maintain_title" 
+		android:textColor="#fff"
+	/>
+
+	<TextView
+		android:id="@+id/maintain_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:textSize="15sp"
+		android:textIsSelectable="true"
+    />
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory                 
+		android:title="@string/cat_language">   
+		<ListPreference                    
+			android:title="@string/title_language"            
+			android:summary="@string/sum_language"    
+			android:key="LANGUAGE_KEY"                         
+			android:entries="@array/languages"            
+			android:entryValues="@array/languages" />   
+    </PreferenceCategory>      
+	
+	<PreferenceCategory             
+		android:title="@string/cat_usage">   
+		<ListPreference                    
+			android:title="@string/title_measure"            
+			android:summary="@string/sum_measure"    
+			android:key="MEASURE_KEY"                    
+			android:entries="@array/measures"            
+			android:entryValues="@array/measures" />  
+	</PreferenceCategory>     
+	
+	<PreferenceCategory             
+			android:title="@string/cat_help">   
+		<Preference               
+			android:title="@string/title_howto"  
+			android:summary="@string/sum_howto"   
+			android:key="HOWTO_KEY" />
+		<Preference               
+			android:title="@string/title_about"  
+			android:summary="@string/sum_about"   
+			android:key="ABOUT_KEY" />
+	</PreferenceCategory>
+</PreferenceScreen>
+	

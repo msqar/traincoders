@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_description">¡Welcome to the Calories Calculator!</string>
+    <string name="weight">Weight</string>
+	<string name="height">Height</string>
+	<string name="age">Age</string>
+	<string name="gender">Gender</string>		
+    <string name="app_name">CaloriesCalculator</string>
+	<string name="select">Select gender</string>
+	<string name="btnCalculate">Calculate now!</string>
+	<string name="results">¡These are the results!</string>
+	<string name="gain_title">To gain weight:</string>
+	<string name="maintain_title">To maintain the same weight:</string>
+	<string name="loss_title">To loss weight:</string>
+	<string name="settings_title">Settings</string>
+	
+	<string name="sum_language">Select the main language</string>
+    <string name="title_language">Select the language</string>
+	<string name="cat_language">Language</string>
+	
+	<string name="cat_help">Help</string>
+	<string name="title_howto">How to</string>
+	<string name="sum_howto">How the app works and features to come</string>
+	<string name="cat_usage">Usage</string>
+	<string name="sum_measure">Select a measure type</string>
+	<string name="title_measure">Measure Type</string>
+	<string name="sum_about">About TrainCoders</string>
+	<string name="title_about">About</string>
+	
+	<string name="splash_desc">This is the splash</string>
+	<!-- <string name=""></string> -->
+	
+	
+	<string-array name="gender_list">
+		<item>Male</item>
+		<item>Female</item>
+	</string-array>
+	
+	<string-array name="languages">
+		<item>English</item>
+		<item>Español</item>
+	</string-array>
+	
+	<string-array name="measures">
+		<item>Meters-Kilograms</item>
+		<item>Inches-Pounds</item>
+	</string-array>
+
+</resources>
