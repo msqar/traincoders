@@ -6,14 +6,16 @@
 	<string name="height">Height</string>
 	<string name="age">Age</string>
 	<string name="gender">Gender</string>		
-    <string name="app_name">CaloriesCalculator</string>
+    <string name="app_name">Calculories</string>
 	<string name="select">Select gender</string>
 	<string name="btnCalculate">Calculate now!</string>
 	<string name="results">¡These are the results!</string>
 	<string name="gain_title">To gain weight:</string>
 	<string name="maintain_title">To maintain the same weight:</string>
 	<string name="loss_title">To loss weight:</string>
+	
 	<string name="settings_title">Settings</string>
+	<string name="exit_title">Exit</string>
 	
 	<string name="sum_language">Select the main language</string>
     <string name="title_language">Select the language</string>
@@ -43,8 +45,14 @@
 	</string-array>
 	
 	<string-array name="measures">
-		<item>Meters-Kilograms</item>
-		<item>Inches-Pounds</item>
+	    <item>Inches-Pounds</item>
+		<item>Centimeters-Kilograms</item>
 	</string-array>
+	
+	<string-array name="measuresValues">
+    <item>"Inches-Pounds"</item>
+    <item>"Centimeters-Kilograms"</item>
+    
+</string-array>  
 
 </resources>

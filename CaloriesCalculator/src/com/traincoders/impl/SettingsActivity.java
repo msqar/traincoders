@@ -1,9 +1,9 @@
 package com.traincoders.impl;
 
 import com.traincoders.impl.R;
+
 import android.os.*;
 import android.preference.*;
-import android.util.*;
 
 public class SettingsActivity extends PreferenceActivity
 	{
@@ -11,6 +11,6 @@ public class SettingsActivity extends PreferenceActivity
 		protected void onCreate(Bundle savedInstanceState)
 			{
 				super.onCreate(savedInstanceState);
-				addPreferencesFromResource(R.xml.settings);
+				addPreferencesFromResource(R.xml.prefs);
 			}
 	}

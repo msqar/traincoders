@@ -24,7 +24,8 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:gravity="center"
-	    android:text="@string/app_description" />
+	    android:text="@string/app_description" 
+	    android:textColor="#fff"/>
 		
 	<View
 		android:layout_width="fill_parent"
@@ -33,12 +34,29 @@
 		android:background="#3e3e3e"
 	/>	
 	
-    <TextView
-		android:id="@+id/weight"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/weight" />
-		
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 
+		    
+		    <TextView
+				android:id="@+id/weight"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+		        android:text="@string/weight" 
+		        android:textColor="#fff"
+		    />
+		    
+		    <TextView
+				android:id="@+id/measureWeight"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:text=""
+		        android:textStyle="italic"
+
+		    />		    
+	</RelativeLayout>	
+	
 	<EditText
 		android:id="@+id/tWeight"
 		android:layout_height="wrap_content"
@@ -47,16 +65,32 @@
 		android:visibility="visible"
 		android:inputType="numberDecimal"
 		android:maxLines="1"
-		android:maxLength="4"
+		android:maxLength="6"
 		android:nextFocusDown="@+id/height"
+		
 		/>
-		
-	<TextView
-		android:id="@+id/height"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/height" />
-		
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 	
+			<TextView
+				android:id="@+id/height"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/height" 
+		        android:textColor="#fff"/>
+			
+			<TextView
+				android:id="@+id/measureHeight"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:text=""
+		        android:textStyle="italic"
+		    />		  
+		    
+	</RelativeLayout>	
+				
 	<EditText
 		android:id="@+id/tHeight"
 		android:layout_height="wrap_content"
@@ -65,15 +99,16 @@
 		android:visibility="visible"
 		android:inputType="numberDecimal"
 		android:maxLines="1"
-		android:maxLength="4"
+		android:maxLength="6"
 		android:nextFocusDown="@+id/age"
 	/>
-		
+
 	<TextView
 		android:id="@+id/age"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/age" />
+        android:text="@string/age" 
+        android:textColor="#fff"/>
 		
 	<EditText
 		android:id="@+id/tAge"
@@ -91,7 +126,8 @@
 		android:id="@+id/gender"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/gender" />
+        android:text="@string/gender" 
+        android:textColor="#fff"/>
 		
 	<Spinner
 		android:id="@+id/tGender"
@@ -109,7 +145,7 @@
 		android:layout_gravity="center_vertical|center_horizontal"
 		android:onClick="onButtonClick"
 		android:background="@drawable/button_style"
-		android:color="#fff"
+		android:textColor="#fff"
 	/>
 	
 	<TextView
@@ -138,6 +174,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
 		android:textSize="15sp"
+		android:text=""
 
     />
 		
@@ -153,6 +190,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
 		android:textSize="15sp"
+		android:text=""
 
     />
 		
@@ -168,6 +206,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
 		android:textSize="15sp"
+		android:text=""
 
     />
 </LinearLayout>

@@ -7,7 +7,8 @@
 			android:summary="@string/sum_language"    
 			android:key="LANGUAGE_KEY"                         
 			android:entries="@array/languages"            
-			android:entryValues="@array/languages" />   
+			android:entryValues="@array/languages" 
+			android:defaultValue="English"/>   
     </PreferenceCategory>      
 	
 	<PreferenceCategory             
@@ -17,7 +18,8 @@
 			android:summary="@string/sum_measure"    
 			android:key="MEASURE_KEY"                    
 			android:entries="@array/measures"            
-			android:entryValues="@array/measures" />  
+			android:entryValues="@array/measuresValues" 
+			android:defaultValue="Inches-Pounds"/>  
 	</PreferenceCategory>     
 	
 	<PreferenceCategory             

@@ -2,6 +2,7 @@ package com.traincoders.impl;
 
 import android.app.*;
 import android.os.*;
+import android.preference.PreferenceManager;
 import android.view.*;
 import android.widget.*;
 import android.content.*;
@@ -9,17 +10,20 @@ import android.content.*;
 public class MainActivity extends Activity
 {
 	private EditText tWeight, tHeight, tAge;
+	private TextView measureWeight, measureHeight;
 	private Spinner tGender;
 	private Button btnCalc;
 	private TextView loss, gain, maintain;
+	private SharedPreferences getPrefs;
+	private String selectedMeasure;
 	
     @Override
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-		initializeAttributes();
-		
+		initializeAttributes();	    
+	    
 		btnCalc.setOnClickListener(new Button
 		    .OnClickListener(){
 
@@ -29,13 +33,23 @@ public class MainActivity extends Activity
 						String gender = (String) 
 						        tGender.getSelectedItem();
 						float total = 0.0f;
+						String newHeight = "";
+						String newWeight = "";
+						if("Centimeters-Kilograms".equals(selectedMeasure)) {
+							newHeight = CalcUtils.convertCentimeterToInches(tHeight.getText().toString());
+							newWeight = CalcUtils.convertKilogramsToPounds(tWeight.getText().toString());
+						}else{
+							newHeight = tHeight.getText().toString();
+							newWeight = tWeight.getText().toString();
+						}
+						
 						if(CalcUtils.MALE.equals(gender)){
-							total = 66f + (6.23f * Float.valueOf(tWeight.getText().toString())
-							        + (12.7f * Float.valueOf(tHeight.getText().toString()))
-									- (6.8f * Float.valueOf(tAge.getText().toString())));
+							total = 66f + (6.23f * Float.valueOf(newWeight)
+							        + (12.7f * Float.valueOf(newHeight)
+									- (6.8f * Float.valueOf(tAge.getText().toString()))));
 						}else if(CalcUtils.FEMALE.equals(gender)){
-								total = 655f + (4.35f * Float.valueOf(tWeight.getText().toString())
-							        + (4.7f * Float.valueOf(tHeight.getText().toString()))
+								total = 655f + (4.35f * Float.valueOf(newWeight)
+							        + (4.7f * Float.valueOf(newHeight))
 									- (4.7f * Float.valueOf(tAge.getText().toString())));
 						}
 						
@@ -77,6 +91,18 @@ public class MainActivity extends Activity
 				}
         });
 	}
+    
+    
+	@Override
+	protected void onResume() {
+		super.onResume();
+		getPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+		selectedMeasure = getPrefs.getString("MEASURE_KEY", "Inches-Pounds");
+		
+	    String[] splitMeasure = selectedMeasure.split("\\-");
+	    measureWeight.setText(splitMeasure[1]);
+	    measureHeight.setText(splitMeasure[0]);		
+	}
 
 	protected void initializeAttributes()
 	{
@@ -88,6 +114,8 @@ public class MainActivity extends Activity
 		loss = (TextView) findViewById(R.id.loss_title);
 		gain = (TextView) findViewById(R.id.gain_title);
 		maintain = (TextView) findViewById(R.id.maintain_title);
+		measureWeight = (TextView) findViewById(R.id.measureWeight);
+		measureHeight = (TextView) findViewById(R.id.measureHeight);
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -101,6 +129,9 @@ public class MainActivity extends Activity
 		switch(item.getItemId()){
 			case R.id.settings_title:
 			   startActivity(new Intent(this, SettingsActivity.class));
+			   return true;
+			case R.id.exit_title:
+				finish();
 			   return true;
 		}
 		return false;
