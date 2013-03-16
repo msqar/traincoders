@@ -6,7 +6,7 @@
 	<string name="height">Height</string>
 	<string name="age">Age</string>
 	<string name="gender">Gender</string>		
-    <string name="app_name">Calculories</string>
+    <string name="app_name">Calcalories</string>
 	<string name="select">Select gender</string>
 	<string name="btnCalculate">Calculate now!</string>
 	<string name="results">¡These are the results!</string>
@@ -50,9 +50,18 @@
 	</string-array>
 	
 	<string-array name="measuresValues">
-    <item>"Inches-Pounds"</item>
-    <item>"Centimeters-Kilograms"</item>
-    
-</string-array>  
+	    <item>"Inches-Pounds"</item>
+	    <item>"Centimeters-Kilograms"</item>    
+	</string-array>  
+	
+	<style name="boldText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="normalText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#C0C0C0</item>
+    </style>
 
 </resources>

@@ -102,6 +102,8 @@ public class MainActivity extends Activity
 	    String[] splitMeasure = selectedMeasure.split("\\-");
 	    measureWeight.setText(splitMeasure[1]);
 	    measureHeight.setText(splitMeasure[0]);		
+	    measureWeight.setTextAppearance(getApplicationContext(), R.style.boldText);
+	    measureHeight.setTextAppearance(getApplicationContext(), R.style.boldText);
 	}
 
 	protected void initializeAttributes()
