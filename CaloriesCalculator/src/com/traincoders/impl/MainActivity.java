@@ -16,6 +16,8 @@ public class MainActivity extends Activity
 	private TextView loss, gain, maintain;
 	private SharedPreferences getPrefs;
 	private String selectedMeasure;
+	private LinearLayout resultLayout;
+	private int resultVisible = View.INVISIBLE;
 	
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -23,7 +25,8 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 		initializeAttributes();	    
-	    
+		
+		
 		btnCalc.setOnClickListener(new Button
 		    .OnClickListener(){
 
@@ -52,13 +55,16 @@ public class MainActivity extends Activity
 							        + (4.7f * Float.valueOf(newHeight))
 									- (4.7f * Float.valueOf(tAge.getText().toString())));
 						}
-						
+											
 						printResults(total);
+						v.invalidate();
+						
 					}
 				}
 
 			private void printResults(float total)
-				{
+				{					
+				
 					float calcGainFrom = total + 250f;
 					float calcGainTo = total + 300f;
 
@@ -69,6 +75,13 @@ public class MainActivity extends Activity
 					loss.setText("About " + String.format("%.0f", calcLoss) + " calories per day."); 
 					
 					maintain.setText("Around " + String.format("%.0f", total) + " calories per day.");
+					
+					if(resultVisible == View.INVISIBLE)
+			        {
+						resultVisible = View.VISIBLE;
+			        }			     
+					resultLayout.setVisibility(resultVisible);
+					
 				}
 
 				private boolean validateInputs()
@@ -118,6 +131,7 @@ public class MainActivity extends Activity
 		maintain = (TextView) findViewById(R.id.maintain_title);
 		measureWeight = (TextView) findViewById(R.id.measureWeight);
 		measureHeight = (TextView) findViewById(R.id.measureHeight);
+		resultLayout = (LinearLayout) findViewById(R.id.results_layout);
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {

@@ -148,66 +148,74 @@
 		android:textColor="#fff"
 	/>
 	
-	<TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/results"
-		android:color="#fff"
-	/>
+	<LinearLayout 
+	    android:id="@+id/results_layout"
+	    android:layout_width="fill_parent"
+   	 	android:layout_height="wrap_content"
+    	android:orientation="vertical" 
+		android:isScrollContainer="true"
+		android:visibility="invisible">	 
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/results"
+			android:color="#fff"
+		/>
+		
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="0.5dip"
+			android:layout_marginTop="5dp"
+			android:background="#3e3e3e"
+		/>
+		
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/loss_title" 
+			android:textColor="#fff"
+		/>
+			
+		<TextView
+			android:id="@+id/loss_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:text=""
 	
-	<View
-		android:layout_width="fill_parent"
-		android:layout_height="0.5dip"
-		android:layout_marginTop="5dp"
-		android:background="#3e3e3e"
-	/>
+	    />
+			
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/gain_title" 
+			android:textColor="#fff"
+		/>
 	
-	<TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/loss_title" 
-		android:textColor="#fff"
-	/>
-		
-	<TextView
-		android:id="@+id/loss_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-		android:textSize="15sp"
-		android:text=""
-
-    />
-		
-	<TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/gain_title" 
-		android:textColor="#fff"
-	/>
-
-	<TextView
-		android:id="@+id/gain_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-		android:textSize="15sp"
-		android:text=""
-
-    />
-		
-	<TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/maintain_title" 
-		android:textColor="#fff"
-	/>
-
-	<TextView
-		android:id="@+id/maintain_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-		android:textSize="15sp"
-		android:text=""
-
-    />
+		<TextView
+			android:id="@+id/gain_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:text=""
+	
+	    />
+			
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/maintain_title" 
+			android:textColor="#fff"
+		/>
+	
+		<TextView
+			android:id="@+id/maintain_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:text=""
+	
+	    />
+	</LinearLayout>
 </LinearLayout>
 </ScrollView>
