@@ -25,10 +25,6 @@
 	<PreferenceCategory             
 			android:title="@string/cat_help">   
 		<Preference               
-			android:title="@string/title_howto"  
-			android:summary="@string/sum_howto"   
-			android:key="HOWTO_KEY" />
-		<Preference               
 			android:title="@string/title_about"  
 			android:summary="@string/sum_about"   
 			android:key="ABOUT_KEY" />

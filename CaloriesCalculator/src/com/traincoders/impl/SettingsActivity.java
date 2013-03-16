@@ -2,8 +2,14 @@ package com.traincoders.impl;
 
 import com.traincoders.impl.R;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.*;
 import android.preference.*;
+import android.preference.Preference.OnPreferenceClickListener;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
 
 public class SettingsActivity extends PreferenceActivity{
 	
@@ -19,7 +25,15 @@ public class SettingsActivity extends PreferenceActivity{
         public void onCreate(final Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.prefs);
+            
+            Preference myPref = (Preference) findPreference("ABOUT_KEY");
+            myPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+                     public boolean onPreferenceClick(Preference preference) {
+                    	 	AboutDialog newFragment = new AboutDialog();
+                    	    newFragment.show(getFragmentManager(), "About");
+							return false;
+                     }
+                 });
         }
-    }
-	 
+    }	 
 }

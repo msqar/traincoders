@@ -6,6 +6,8 @@ import android.preference.PreferenceManager;
 import android.view.*;
 import android.widget.*;
 import android.content.*;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 
 public class MainActivity extends Activity
 {
@@ -24,6 +26,7 @@ public class MainActivity extends Activity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        displayVersionName();
 		initializeAttributes();	    
 		
 		
@@ -151,5 +154,18 @@ public class MainActivity extends Activity
 			   return true;
 		}
 		return false;
+	}
+	
+	private void displayVersionName() {
+	    String versionName = "";
+	    PackageInfo packageInfo;
+	    try {
+	        packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+	        versionName = "v " + packageInfo.versionName;
+	    } catch (NameNotFoundException e) {
+	        e.printStackTrace();
+	    }
+	    TextView tv = (TextView) findViewById(R.id.app_version);
+	    tv.setText(versionName);
 	}
 }
