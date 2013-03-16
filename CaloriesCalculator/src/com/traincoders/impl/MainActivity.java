@@ -27,9 +27,8 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         displayVersionName();
-		initializeAttributes();	    
-		
-		
+		initializeAttributes();	   
+				
 		btnCalc.setOnClickListener(new Button
 		    .OnClickListener(){
 
@@ -41,7 +40,7 @@ public class MainActivity extends Activity
 						float total = 0.0f;
 						String newHeight = "";
 						String newWeight = "";
-						if("Centimeters-Kilograms".equals(selectedMeasure)) {
+						if(CalcUtils.CMKG_MEASURE.equals(selectedMeasure)) {
 							newHeight = CalcUtils.convertCentimeterToInches(tHeight.getText().toString());
 							newWeight = CalcUtils.convertKilogramsToPounds(tWeight.getText().toString());
 						}else{
@@ -60,51 +59,48 @@ public class MainActivity extends Activity
 						}
 											
 						printResults(total);
-						v.invalidate();
-						
+						v.invalidate();						
 					}
 				}
 
-			private void printResults(float total)
-				{					
+			private void printResults(float total){				
 				
-					float calcGainFrom = total + 250f;
-					float calcGainTo = total + 300f;
+				float calcGainFrom = total + 250f;
+				float calcGainTo = total + 300f;
 
-					gain.setText("From " + String.format("%.0f", calcGainFrom) + " to " + 
-								 String.format("%.0f", calcGainTo) + " calories per day."); 
+				gain.setText("From " + String.format("%.0f", calcGainFrom) + " to " + 
+							 String.format("%.0f", calcGainTo) + " calories per day."); 
+			
+				float calcLoss = total - 500f;
+				loss.setText("About " + String.format("%.0f", calcLoss) + " calories per day."); 
 				
-					float calcLoss = total - 500f;
-					loss.setText("About " + String.format("%.0f", calcLoss) + " calories per day."); 
-					
-					maintain.setText("Around " + String.format("%.0f", total) + " calories per day.");
-					
-					if(resultVisible == View.INVISIBLE)
-			        {
-						resultVisible = View.VISIBLE;
-			        }			     
-					resultLayout.setVisibility(resultVisible);
-					
-				}
+				maintain.setText("Around " + String.format("%.0f", total) + " calories per day.");
+				
+				if(resultVisible == View.INVISIBLE)
+		        {
+					resultVisible = View.VISIBLE;
+		        }			     
+				resultLayout.setVisibility(resultVisible);
+				
+			}
 
-				private boolean validateInputs()
-				{
-					boolean success = true;
-					if(tWeight.getText() == null || tWeight.getText().toString().length() == 0){
-						tWeight.setError("Weight is required");
-						success=false;
-					}
-
-					if(tHeight.getText() == null || tHeight.getText().toString().length() == 0){
-						tHeight.setError("Height is required");
-						success=false;
-					}
-					if(tAge.getText() == null || tAge.getText().toString().length() == 0){
-						tAge.setError("Age is required");
-						success=false;
-					}
-					return success;
+			private boolean validateInputs()
+			{
+				boolean success = true;
+				if(tWeight.getText() == null || tWeight.getText().toString().length() == 0){
+					tWeight.setError(CalcUtils.WEIGHT_REQ_ERROR);
+					success=false;
 				}
+				if(tHeight.getText() == null || tHeight.getText().toString().length() == 0){
+					tHeight.setError(CalcUtils.WEIGHT_REQ_ERROR);
+					success=false;
+				}
+				if(tAge.getText() == null || tAge.getText().toString().length() == 0){
+					tAge.setError(CalcUtils.AGE_REQ_ERROR);
+					success=false;
+				}
+				return success;
+			}
         });
 	}
     
