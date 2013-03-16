@@ -6,6 +6,13 @@
     android:gravity="center"
     android:background="@drawable/radialback">
 	
+    <TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:text="@string/app_description" 
+	    android:textColor="#fff"/>
+    	
 	<ImageView
 	    android:id="@+id/titles"
 	    android:layout_width="253dp"

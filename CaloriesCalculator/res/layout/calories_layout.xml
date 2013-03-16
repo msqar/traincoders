@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+          
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+	android:isScrollContainer="true"
+	>
+	
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"> 
+        
+	        <TextView
+	        android:id="@+id/app_version"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="right"
+		    android:text="" 
+		    android:textColor="#fff"/>
+        
+    </RelativeLayout>
+    <!-- 
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="243dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="#000"
+        android:contentDescription="@string/splash_desc"
+        android:src="@drawable/titles_splash" />
+     -->	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"> 
+		    
+		    <TextView
+				android:id="@+id/weight"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+		        android:text="@string/weight" 
+		        android:textColor="#fff"
+		    />
+		    
+		    <TextView
+				android:id="@+id/measureWeight"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:text=""
+		        android:textStyle="italic"
+
+		    />		    
+	</RelativeLayout>	
+	
+	<EditText
+		android:id="@+id/tWeight"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		
+		android:visibility="visible"
+		android:inputType="numberDecimal"
+		android:maxLines="1"
+		android:maxLength="6"
+		android:nextFocusDown="@+id/height"
+		android:layout_marginTop="5dp"
+		
+		/>
+	
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"> 	
+			<TextView
+				android:id="@+id/height"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/height" 
+		        android:textColor="#fff"/>
+			
+			<TextView
+				android:id="@+id/measureHeight"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:text=""
+		        android:textStyle="italic"
+		    />		  
+		    
+	</RelativeLayout>	
+				
+	<EditText
+		android:id="@+id/tHeight"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+
+		android:visibility="visible"
+		android:inputType="numberDecimal"
+		android:maxLines="1"
+		android:maxLength="6"
+		android:nextFocusDown="@+id/age"
+	/>
+
+	<TextView
+		android:id="@+id/age"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/age" 
+        android:textColor="#fff"/>
+		
+	<EditText
+		android:id="@+id/tAge"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+
+		android:visibility="visible"
+		android:inputType="numberDecimal"
+		android:maxLines="1"
+		android:maxLength="2"
+		android:nextFocusDown="@+id/gender"
+	/>
+	
+	<TextView
+		android:id="@+id/gender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gender" 
+        android:textColor="#fff"/>
+		
+	<Spinner
+		android:id="@+id/tGender"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:prompt="@string/select"
+		android:entries="@array/gender_list"
+	/>	
+	
+	<Button
+		android:id="@+id/btnCalculate"
+		android:text="@string/btnCalculate"
+		android:layout_marginTop="20dp"
+		android:layout_height="40dp"
+		android:layout_width="186.67dp"
+		android:textSize="17sp"
+		android:paddingBottom="5dp"
+		android:layout_gravity="center_vertical|center_horizontal"
+		android:onClick="onButtonClick"
+		android:background="@drawable/button_style"
+		android:textColor="#fff"
+	/>
+	
+	<LinearLayout 
+	    android:id="@+id/results_layout"
+	    android:layout_width="fill_parent"
+   	 	android:layout_height="wrap_content"
+    	android:orientation="vertical" 
+		android:isScrollContainer="true"
+		android:visibility="gone">	 
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/results"
+			android:color="#fff"
+		/>
+		
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="0.5dip"
+			android:layout_marginTop="5dp"
+			android:background="#3e3e3e"
+		/>
+		
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/loss_title" 
+			android:textColor="#fff"
+		/>
+			
+		<TextView
+			android:id="@+id/loss_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:text=""
+	
+	    />
+			
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/gain_title" 
+			android:textColor="#fff"
+		/>
+	
+		<TextView
+			android:id="@+id/gain_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:text=""
+	
+	    />
+			
+		<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/maintain_title" 
+			android:textColor="#fff"
+		/>
+	
+		<TextView
+			android:id="@+id/maintain_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:text=""
+	
+	    />
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>
