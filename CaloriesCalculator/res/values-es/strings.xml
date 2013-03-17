@@ -40,7 +40,7 @@
 	<string name="splash_desc">Este es el splash screen</string>
 	<!-- <string name=""></string> -->
 	
-	<string name="percentile_text">Aquí va el contenido del percentilo</string>
+	<string name="percentile_text">En construcción. Estará disponible en la versión 1.1</string>
 	<string-array name="gender_list">
 		<item>Hombre</item>
 		<item>Mujer</item>

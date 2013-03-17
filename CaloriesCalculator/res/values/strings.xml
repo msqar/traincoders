@@ -40,7 +40,7 @@
 	<string name="splash_desc">This is the splash</string>
 	<!-- <string name=""></string> -->
 	
-	<string name="percentile_text">Here goes the percentile content</string>
+	<string name="percentile_text">Under construction. It will be available in version 1.1</string>
 	<string-array name="gender_list">
 		<item>Male</item>
 		<item>Female</item>

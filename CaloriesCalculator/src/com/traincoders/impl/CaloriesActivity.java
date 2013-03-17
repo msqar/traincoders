@@ -77,14 +77,19 @@ public class CaloriesActivity extends Activity {
 				
 					float calcGainFrom = total + 250f;
 					float calcGainTo = total + 300f;
-
-					gain.setText("From " + String.format("%.0f", calcGainFrom) + " to " + 
-								 String.format("%.0f", calcGainTo) + " calories per day."); 
-				
 					float calcLoss = total - 500f;
-					loss.setText("About " + String.format("%.0f", calcLoss) + " calories per day."); 
 					
-					maintain.setText("Around " + String.format("%.0f", total) + " calories per day.");
+					if("English".equals(selectedLanguage)) {
+						gain.setText("From " + String.format("%.0f", calcGainFrom) + " to " + 
+								String.format("%.0f", calcGainTo) + " calories per day."); 
+						loss.setText("About " + String.format("%.0f", calcLoss) + " calories per day."); 
+						maintain.setText("Around " + String.format("%.0f", total) + " calories per day.");						
+					}else{
+						gain.setText("Desde " + String.format("%.0f", calcGainFrom) + " a " + 
+								String.format("%.0f", calcGainTo) + " calorías por día."); 
+						loss.setText("Desde " + String.format("%.0f", calcLoss) + " calorías por día."); 
+						maintain.setText("Alrededor de " + String.format("%.0f", total) + " calorías por día.");	
+					}
 					
 					if(resultVisible == View.INVISIBLE)
 			        {
