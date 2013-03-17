@@ -19,6 +19,7 @@
 			android:key="MEASURE_KEY"                    
 			android:entries="@array/measures"            
 			android:entryValues="@array/measuresValues" 
+			android:persistent="true"
 			android:defaultValue="Inches-Pounds"/>  
 	</PreferenceCategory>     
 	
