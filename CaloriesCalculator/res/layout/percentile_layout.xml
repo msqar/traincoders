@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-              android:gravity="center">
+  android:gravity="top">
+              
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"> 
+        
+	        <TextView
+	        android:id="@+id/app_version"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="top|right"
+		    android:text="" 
+		    android:textColor="#fff"/>
+        
+    </RelativeLayout>
  
   <!-- Screen Design for Photos -->
-  <TextView android:text="@string/percentile_text"
-            android:padding="15dip"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
+	<LinearLayout 
+	  android:orientation="vertical"
+	  android:layout_width="match_parent"
+	  android:layout_height="match_parent"
+	  android:gravity="center">
+	        
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:padding="15dip"
+	        android:text="@string/percentile_text"
+	        android:textSize="18sp" />
+    </LinearLayout>
  
-</LinearLayout>
+</RelativeLayout>
