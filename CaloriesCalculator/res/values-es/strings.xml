@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_description">Bienvenido a &#8230;</string>
+    <string name="weight">Peso</string>
+	<string name="height">Altura</string>
+	<string name="age">Edad</string>
+	<string name="gender">Sexo</string>		
+    
+    <string name="app_name">HealthyCalc</string>
+    
+	<string name="select">Seleccione género</string>
+	<string name="btnCalculate">Calcular ahora!</string>
+	<string name="results">¡Estos son tus resultados!</string>
+	<string name="gain_title">Para ganar peso:</string>
+	<string name="maintain_title">Para mantener su mismo peso:</string>
+	<string name="loss_title">Para perder peso:</string>
+	
+	<string name="settings_title">Opciones</string>
+	<string name="exit_title">Salir</string>
+	
+	<string name="sum_language">Seleccione el lenguaje principal</string>
+    <string name="title_language">Seleccione el lenguaje</string>
+	<string name="cat_language">Lenguaje</string>
+	
+	<string name="cat_help">Ayuda</string>
+	
+	<string name="cat_usage">Uso</string>
+	<string name="sum_measure">Seleccione el tipo de medición</string>
+	<string name="title_measure">Tipo de medición</string>
+	<string name="sum_about">Acerca de la aplicación</string>
+	<string name="title_about">Acerca</string>
+	<string name="about_message">Ésta herramienta es usada para medir las calorías diarias a consumir según se quiera reducir, mantener o aumentar el peso actual. 
+	    Dependiendo de su peso, altura, edad o género.</string>
+	
+	<string name="btn_accept">Aceptar</string>
+	<string name="btn_cancel">Cancelar</string>
+	
+	
+	<string name="splash_desc">Este es el splash screen</string>
+	<!-- <string name=""></string> -->
+	
+	<string name="percentile_text">Aquí va el contenido del percentilo</string>
+	<string-array name="gender_list">
+		<item>Hombre</item>
+		<item>Mujer</item>
+	</string-array>
+	
+	<string-array name="languages">
+		<item>English</item>
+		<item>Español</item>
+	</string-array>
+	
+	<string-array name="measures">
+	    <item>Pulgadas-Libras</item>
+		<item>Centímetros-Kilogramos</item>
+	</string-array>
+	
+	<string-array name="measuresValues">
+	    <item>"Pulgadas-Libras"</item>
+	    <item>"Centímetros-Kilogramos"</item>    
+	</string-array>  
+	
+	<style name="boldText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="normalText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#C0C0C0</item>
+    </style>
+
+</resources>

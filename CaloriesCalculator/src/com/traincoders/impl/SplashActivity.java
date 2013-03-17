@@ -1,9 +1,13 @@
 package com.traincoders.impl;
 
+import java.util.Locale;
+
 import android.app.*;
 import android.content.*;
+import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.os.*;
+import android.preference.PreferenceManager;
 import android.view.*;
 
 public class SplashActivity extends Activity{
@@ -11,11 +15,27 @@ public class SplashActivity extends Activity{
 	// used to know if the back button was pressed in the splash screen activity and avoid opening the next activity
     private boolean mIsBackButtonPressed;
     private static final int SPLASH_DURATION = 2000; // 2 seconds
- 
+	private SharedPreferences getPrefs;
+	private String selectedLanguage;
  
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash);        
+        getPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+		selectedLanguage = getPrefs.getString("LANGUAGE_KEY", "English");
+        String locale = "English".equals(selectedLanguage) ?  "en" : "es";
+               
+        Locale appLoc = new Locale(locale);
+        Locale.setDefault(appLoc);
+        Configuration appConfig = new Configuration();
+        
+        appConfig.locale = appLoc;
+        getBaseContext().getResources().updateConfiguration(appConfig,
+            getBaseContext().getResources().getDisplayMetrics());
+        
+        setContentView(R.layout.splash);       
+        
+        
+        
         Handler handler = new Handler();
  
         // run a thread after 2 seconds to start the home screen
