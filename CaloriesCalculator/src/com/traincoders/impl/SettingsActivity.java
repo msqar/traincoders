@@ -2,13 +2,12 @@ package com.traincoders.impl;
 
 import com.traincoders.impl.R;
 
-import android.app.AlertDialog;
 import android.os.*;
 import android.preference.*;
 import android.preference.Preference.OnPreferenceClickListener;
 
 
-public class SettingsActivity extends PreferenceActivity{
+public class SettingsActivity extends PreferenceActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
