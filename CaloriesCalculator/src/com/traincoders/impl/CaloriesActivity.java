@@ -1,5 +1,7 @@
 package com.traincoders.impl;
 
+import com.traincoders.utils.CalcUtils;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
