@@ -56,14 +56,10 @@ public class UserEdbHelper extends SQLiteOpenHelper {
     	cv.put("user_gender", StringNotNull(user.getGender()));
     	cv.put("prod_id", user.getProdId());
     	cv.put("consumed_date", DateToString(user.getConsumedDate()));
-    	cv.put("amount_consumed", LongToString(user.getAmountConsumed()));
+    	cv.put("amount_consumed", user.getAmountConsumed());
     	db.insert(userTable, colID, cv);
     }
-
-	private String LongToString(Integer value) {		
-		return value != null ? String.valueOf(value) : null;
-	}
-
+    
 	private String DateToString(Date date) {		
 		java.util.Date today = new java.util.Date();		
 		return date != null ? String.valueOf(date) : String.valueOf(today.getTime());

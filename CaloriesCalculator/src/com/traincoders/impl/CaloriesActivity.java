@@ -5,8 +5,6 @@ import com.traincoders.utils.CalcUtils;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -38,7 +36,6 @@ public class CaloriesActivity extends Activity {
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calories_layout);
-        displayVersionName();
 		initializeAttributes();		
 		
 		btnCalc.setOnClickListener(new Button
@@ -187,16 +184,16 @@ public class CaloriesActivity extends Activity {
 		return false;
 	}
 	
-	private void displayVersionName() {
-	    String versionName = "";
-	    PackageInfo packageInfo;
-	    try {
-	        packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-	        versionName = "v " + packageInfo.versionName;
-	    } catch (NameNotFoundException e) {
-	        e.printStackTrace();
-	    }
-	    TextView tv = (TextView) findViewById(R.id.app_version);
-	    tv.setText(versionName);
-	}
+//	private void displayVersionName() {
+//	    String versionName = "";
+//	    PackageInfo packageInfo;
+//	    try {
+//	        packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+//	        versionName = "v " + packageInfo.versionName;
+//	    } catch (NameNotFoundException e) {
+//	        e.printStackTrace();
+//	    }
+//	    TextView tv = (TextView) findViewById(R.id.app_version);
+//	    tv.setText(versionName);
+//	}
 }
