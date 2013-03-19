@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.traincoders.impl"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1" >
 
     <uses-sdk 
         android:minSdkVersion="11" 
@@ -17,8 +17,10 @@
             android:name=".MainActivity" 
 			android:theme="@style/MyTheme">
         </activity>
-         <activity android:name=".CaloriesActivity" />
-         <activity android:name=".PercentileActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".CaloriesActivity" />
+        <activity android:name=".FoodCalculatorActivity" />
+        <activity android:name=".CalendarActivity" />
 		<activity
 			android:name=".SettingsActivity"
 			android:label="@string/settings_title"
