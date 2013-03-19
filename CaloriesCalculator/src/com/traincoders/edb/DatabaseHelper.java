@@ -4,8 +4,10 @@ import java.util.Date;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -73,6 +75,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     	cv.put("consumed_date", DateToString(user.getConsumedDate()));
     	cv.put("amount_consumed", LongToString(user.getAmountConsumed()));
     	db.insert(userTable, colID, cv);
+    }
+    
+    public void populateProductTable(SQLiteDatabase db) {
+
     }
 
 	private String LongToString(Integer value) {		
