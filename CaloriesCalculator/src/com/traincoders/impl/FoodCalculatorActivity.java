@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class FoodCalculatorActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.percentile_layout);
+        setContentView(R.layout.foodlist_layout);
         displayVersionName();        
     }
     
