@@ -6,11 +6,14 @@
     <string name="txt_login_welcome">Welcome to Healthy+</string>
     <string name="txt_userinfo">PERSONAL INFO</string>
     <string name="btn_create_user">Create User</string>
+    <string name="btn_confirm">¡Create now!</string>
     <string name="btn_access">Access now</string>
     <string name="firstname">First Name</string>
     <string name="lastname">Last Name</string>
     <string name="username">Username</string>
-    <string name="txt_health_info">MEASURES</string>   
+    <string name="txt_health_info">MEASURES</string> 
+    <string name="txt_logininfo">LOG-IN</string> 
+      
     
 	<string name="app_description">Welcome to &#8230;</string>
     <string name="weight">Weight</string>

@@ -16,7 +16,10 @@
             android:name=".MainActivity" 
 			android:theme="@style/MyTheme">
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity 
+            android:name=".LoginActivity" 
+            android:theme="@android:style/Theme.Holo.NoActionBar">
+        </activity>
         <activity android:name=".ProfileActivity" />
         <activity android:name=".CaloriesActivity" />
         <activity android:name=".FoodCalculatorActivity" />

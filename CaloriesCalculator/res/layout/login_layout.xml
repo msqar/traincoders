@@ -259,9 +259,10 @@
 		    android:layout_height="40dp"
 		    android:background="@drawable/button_style"
 		    android:layout_gravity ="center"
-		    android:text="@string/btn_create_user"
+		    android:text="@string/btn_confirm"
 		    android:textColor="#fff"
 		    android:layout_marginTop="17dp"
+		    android:layout_marginBottom="17dp"
 		    android:textSize="17sp" />			   
 	   </LinearLayout>   
 	   
@@ -276,6 +277,28 @@
 	    android:orientation="vertical" 
 		android:isScrollContainer="true"
 		android:visibility="gone" >
+			
+        <TextView
+		       android:layout_width="fill_parent"
+		       android:layout_height="wrap_content"
+		       android:text="@string/txt_logininfo" 
+		       android:textColor="#fff"
+		       android:layout_marginTop="20dp"
+		       android:layout_marginLeft="15dp"
+		       android:gravity="left"
+		       android:textSize="8pt"
+		       
+		   />	   
+		   
+		   <View
+				android:layout_width="fill_parent"
+				android:layout_height="0.5dip"
+				android:layout_marginTop="5dp"
+				android:layout_marginLeft="12dp"
+				android:layout_marginRight="12dp"
+				android:layout_gravity="center"
+				android:background="#3e3e3e"
+		   />
 				   
 	   		<TextView
 		        android:layout_width="fill_parent"
