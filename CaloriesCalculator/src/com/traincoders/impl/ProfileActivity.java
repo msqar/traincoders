@@ -7,8 +7,9 @@ public class ProfileActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
-		super.onCreate(savedInstanceState);
-        setContentView(R.layout.foodlist_layout); 
-	}	
+		super.onCreate(savedInstanceState);        
+		setContentView(R.layout.profile_layout);  	
+		
+	}
 }
 

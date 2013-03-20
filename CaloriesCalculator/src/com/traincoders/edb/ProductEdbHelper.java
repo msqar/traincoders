@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class ProductEdbHelper extends SQLiteOpenHelper {
 	
-	static final String dbName = "edb";
+	static final String dbName = "edb.db";
 	static final String productTable = "prod_table";
 	
 	static final String colProdID = "prod_id";
@@ -28,6 +28,7 @@ public class ProductEdbHelper extends SQLiteOpenHelper {
     			colProdName + " TEXT NOT NULL, " + colProdCompany + " TEXT, " + colProdType + " TEXT NOT NULL, " +
     			colProdSubType + " TEXT, " + colProdCalories + " INTEGER NOT NULL, " + colProdKJoules + " INTEGER, " +
     			colProdCaloriesFromFat + " INTEGER)");
+    	populateProductTable(db);
     }    
     
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

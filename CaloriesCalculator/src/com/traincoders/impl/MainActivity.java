@@ -1,5 +1,9 @@
 package com.traincoders.impl;
 
+import com.traincoders.edb.AppCore;
+import com.traincoders.edb.EdbUser;
+import com.traincoders.edb.UserEdbHelper;
+
 import android.app.*;
 import android.os.*;
 import android.widget.*;
@@ -10,13 +14,23 @@ import android.content.res.Resources;
 @SuppressWarnings("deprecation")
 public class MainActivity extends TabActivity
 {	
-	 @Override
+	 	@Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.main);
-	       
+	        
+	        // initialize database
+//	        AppCore.init(getApplicationContext());
+	        
+	        if(firstTimeCheck()) {
+				startActivity(new Intent(this, LoginActivity.class));
+				finish();
+			}else{
+				setContentView(R.layout.main);
+			} 
+	        
 	        TabHost tabHost = getTabHost();	     
-	        Resources res = getResources();	     
+	        Resources res = getResources();	 
+	        	        
 	        TabSpec calspec = tabHost.newTabSpec("Calories");       
 	        calspec.setIndicator("", res.getDrawable((R.drawable.calories_tab_conf)));
 	        Intent caloriesIntent = new Intent(this, CaloriesActivity.class);
@@ -43,4 +57,13 @@ public class MainActivity extends TabActivity
 	        tabHost.addTab(foodspec); // Adding food calc tab
 	        tabHost.addTab(calendarspec); // Adding calendar tab	        
 	    }
+	 
+		private boolean firstTimeCheck() {
+			
+//	        EdbUser user = new EdbUser();
+//	        AppCore.userHelper.queryUser(AppCore.getUserDb(getApplicationContext()), user);
+//	        AppCore.userHelper.insertUserRow(AppCore.getUserDb(getApplicationContext()), user);
+
+			return true;
+		}	
 }
